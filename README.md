@@ -35,18 +35,50 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:*/
+## program
+~~~
+
+module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
+input A,B,C,D,W,X,Y,Z;
+wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
+output F1,F2;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign x6=(X)&(~Y)&(Z);
+assign x7=(~X)&(~Y)&(Z);
+assign x8=(~W)&(X)&(Y);
+assign x9=(W)&(~X)&(Y);
+assign x10=(W)&(X)&(Y);
+assign F1=x1|x2|x3|x4|x5;
+assign F2=x6|x7|x8|x9|x10;
+endmodule
+
+Developed by: NISHANTH J
+Register Number:212223100040
+~~~
+
+## Logic Symbol and Truth table
+
+![image](https://github.com/Nishanth-018/BOOLEAN_FUNCTION_MINIMIZATION/assets/149347651/ce301717-d355-4223-acbe-010b4775bdac)
 
 
-**RTL realization**
+![image](https://github.com/Nishanth-018/BOOLEAN_FUNCTION_MINIMIZATION/assets/149347651/50f42457-0ce2-4272-b422-bdc160f5ddf8)
 
-**Output:**
+## RTL realization output
 
-**RTL**
 
-**Timing Diagram**
+![image](https://github.com/Nishanth-018/BOOLEAN_FUNCTION_MINIMIZATION/assets/149347651/0c9292cb-1a82-43b7-933a-dc73dc3cf0f7)
 
-**Result:**
+
+## RTL
+
+
+![image](https://github.com/Nishanth-018/BOOLEAN_FUNCTION_MINIMIZATION/assets/149347651/f059c8b0-8544-4907-b7f4-34cd8077ed5e)
+
+## Result:
 
 Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
 
